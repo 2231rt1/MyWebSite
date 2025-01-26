@@ -1,14 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "@pages/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { homePage } from "@pages/homePage";
+import { Fallback } from "@shared/ui/fallback/error/error";
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: homePage(),
+    errorElement: <Fallback />,
+  },
+]);
 
-export default App;
+export const App = () => {
+  return <RouterProvider router={router} />;
+};
