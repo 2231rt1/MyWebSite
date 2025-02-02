@@ -1,11 +1,20 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
+
+import viteReact from "@vitejs/plugin-react";
 import sass from "vite-plugin-sass";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), sass()],
+  plugins: [
+    viteReact(),
+    TanStackRouterVite({
+      autoCodeSplitting: true,
+      routesDirectory: "src/app/routes/ui",
+    }),
+    sass(),
+  ],
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),

@@ -1,9 +1,8 @@
-// src/pages/homePage/ui/homePage.tsx
-import s from "./home.module.scss";
+import s from "./homePage.module.scss";
 
 export const homePage = () => {
   return (
-    <div>
+    <div className={s.container}>
       <h1>Mr.Blood</h1>
     </div>
   );

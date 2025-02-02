@@ -1,0 +1,52 @@
+.fallback {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.fallback__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.fallback__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.fallback__error-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.fallback__title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.fallback__message,
+.fallback__status {
+  margin-bottom: 10px;
+}
+
+.fallback__link {
+  margin-top: 20px;
+  color: #61dca3;
+  text-decoration: underline;
+}
