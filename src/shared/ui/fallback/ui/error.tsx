@@ -12,7 +12,8 @@ export function FallbackInternal({
 
   return (
     <div role="alert" className="fallback">
-      <div className="letter-glitch">
+      {/* Фон с LetterGlitch */}
+      <div className="fallback__background">
         <LetterGlitch
           glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
           glitchSpeed={50}
@@ -21,22 +22,27 @@ export function FallbackInternal({
           smooth={false}
         />
       </div>
-      <img src={errorImage} alt="Error" />
-      <h1 className="fallback__title">Что-то пошло не так</h1>
-      {knownError && (
-        <>
-          <p className="fallback__message">
-            {knownError.messageError || "Не удалось загрузить данные."}
-          </p>
-          {knownError.status && (
-            <p className="fallback__status">Код ошибки: {knownError.status}</p>
-          )}
-        </>
-      )}
-      {reset && <button onClick={reset}>Повторить попытку</button>}
-      <Link to="/" className="fallback__link">
-        На главную страницу
-      </Link>
+      {/* Контент */}
+      <div className="fallback__content">
+        <img src={errorImage} alt="Error" className="fallback__error-image" />
+        <h1 className="fallback__title">Что-то пошло не так</h1>
+        {knownError && (
+          <>
+            <p className="fallback__message">
+              {knownError.messageError || "Не удалось загрузить данные."}
+            </p>
+            {knownError.status && (
+              <p className="fallback__status">
+                Код ошибки: {knownError.status}
+              </p>
+            )}
+          </>
+        )}
+        {reset && <button onClick={reset}>Повторить попытку</button>}
+        <Link to="/" className="fallback__link">
+          На главную страницу
+        </Link>
+      </div>
     </div>
   );
 }
