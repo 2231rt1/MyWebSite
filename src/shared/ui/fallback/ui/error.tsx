@@ -1,8 +1,13 @@
 import { Link } from "@tanstack/react-router";
+
+import "./error.module.scss";
+
 import { RejectedDataType } from "@shared/types";
 import errorImage from "@shared/assets/images/errorImage.svg";
 import { LetterGlitch } from "@shared/ui/LetterGlitch";
-import "./error.module.scss";
+import { StarBorder } from "@shared/ui/StarBorder";
+import { ShinyText } from "@shared/ui/ShinyText";
+import { Magnet } from "@shared/ui/Magnet";
 
 export function FallbackInternal({
   error,
@@ -25,7 +30,6 @@ export function FallbackInternal({
       {/* Контент */}
       <div className="fallback__content">
         <img src={errorImage} alt="Error" className="fallback__error-image" />
-        <h1 className="fallback__title">Что-то пошло не так</h1>
         {knownError && (
           <>
             <p className="fallback__message">
@@ -38,9 +42,17 @@ export function FallbackInternal({
             )}
           </>
         )}
-        {reset && <button onClick={reset}>Повторить попытку</button>}
-        <Link to="/" className="fallback__link">
-          На главную страницу
+        {reset && (
+          <StarBorder className="button" onClick={reset}>
+            Reset page?
+          </StarBorder>
+        )}
+        <Link to="/">
+          <Magnet padding={150} disabled={false} magnetStrength={15}>
+            <StarBorder className="button" color="cyan" speed="5s">
+              <ShinyText text="Back to home page" disabled={false} speed={3} />
+            </StarBorder>
+          </Magnet>
         </Link>
       </div>
     </div>
