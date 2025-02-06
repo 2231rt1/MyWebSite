@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import "./error.module.scss";
 
 import errorImage from "@shared/assets/images/errorImage.svg";
-import { LetterGlitch } from "@shared/ui/LetterGlitch";
+import { Waves } from "@shared/ui/Waves";
 import { StarBorder } from "@shared/ui/StarBorder";
 import { ShinyText } from "@shared/ui/ShinyText";
 import { Magnet } from "@shared/ui/Magnet";
@@ -13,12 +13,18 @@ export function FallbackInternal() {
     <div role="alert" className="fallback">
       {/* Фон */}
       <div className="fallback__background">
-        <LetterGlitch
-          glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
-          glitchSpeed={50}
-          centerVignette={true}
-          outerVignette={false}
-          smooth={false}
+        <Waves
+          lineColor="rgba(57, 0, 153)"
+          backgroundColor="rgba(0, 0, 0, 0.2)"
+          waveSpeedX={0.02}
+          waveSpeedY={0.01}
+          waveAmpX={40}
+          waveAmpY={20}
+          friction={0.9}
+          tension={0.01}
+          maxCursorMove={120}
+          xGap={12}
+          yGap={36}
         />
       </div>
       {/* Контент */}
