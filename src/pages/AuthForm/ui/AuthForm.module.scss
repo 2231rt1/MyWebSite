@@ -1,0 +1,68 @@
+.auth {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    // Стилизация для всех input, select и textarea внутри контента
+    input,
+    select,
+    textarea {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 16px;
+      background-color: #fff;
+      margin-bottom: 1rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+  }
+}
+
+.field-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Стили для полей с ошибкой
+input.error-border,
+select.error-border,
+textarea.error-border {
+  border: 1px solid red;
+  border-radius: 8px;
+}
+
+// Стили для текста ошибки в лейблах
+.error-text {
+  color: red;
+}
+
+// Стили для сообщений об ошибке (например, "Обязательное поле")
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

@@ -1,9 +1,14 @@
-import s from "./homePage.module.scss";
+import { Link } from "@tanstack/react-router";
 
 export const homePage = () => {
   return (
-    <div className={s.container}>
-      <h1>Mr.Blood</h1>
+    <div className="home-page">
+      <h1>Добро пожаловать!</h1>
+      <div className="auth-buttons">
+        <Link to="/SignIn">
+          <button>Регистрация</button>
+        </Link>
+      </div>
     </div>
   );
 };
