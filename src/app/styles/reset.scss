@@ -1,0 +1,157 @@
+// Глобальное обнуление стилей
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+// Базовая настройка HTML-элементов
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Убираем стандартное оформление списков
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Сбрасываем стили для ссылок
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: inherit;
+}
+
+// Обнуление для таблиц
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Сброс некоторых дополнительных элементов
+img,
+video,
+canvas,
+audio,
+svg {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// Устанавливаем базовые стили для форм
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+// Сброс цитат
+blockquote,
+q {
+  quotes: none;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+// Дополнительно можно задать универсальный фон и цвет текста
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// Обнуление стилей для всех элементов
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+section,
+header,
+footer,
+nav,
+main,
+aside,
+article,
+figure,
+figcaption,
+ul,
+ol,
+li,
+a,
+img,
+video,
+canvas,
+audio,
+svg,
+table,
+tr,
+td,
+th,
+thead,
+tbody,
+tfoot,
+input,
+button,
+textarea,
+select,
+label,
+fieldset,
+legend,
+datalist,
+optgroup,
+option {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}

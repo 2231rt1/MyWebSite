@@ -1,9 +1,7 @@
-import { Link, Outlet } from "@tanstack/react-router";
+import React from "react";
+import { Outlet, useLocation } from "@tanstack/react-router";
 
-export const Root = () => {
-  return (
-    <div>
-      <Outlet />
-    </div>
-  );
+export const Root: React.FC = () => {
+  const location = useLocation();
+  return <Outlet />;
 };

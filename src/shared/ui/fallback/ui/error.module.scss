@@ -5,11 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 
   &__background {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -33,8 +32,7 @@
 
 .star-border-container {
   .inner-content {
-    width: 11vw;
-    height: 2.7vh;
+    size: 5rem;
   }
 }
 

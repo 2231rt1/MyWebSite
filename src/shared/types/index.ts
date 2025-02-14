@@ -1,1 +1,6 @@
-export { type ErrorType, type RejectedDataType } from "./errorTypes";
+export {
+  type WavesProps,
+  type Points,
+  type BoundingElement,
+  type MouseObject,
+} from "./Waves";
